@@ -1,17 +1,12 @@
+let hello = "hi, it's sunny outside";
 
-// declare variables here
-
-
-// setup runs once
 function setup() {
-	createCanvas(500, 500);
-	background(150);
+	console.log(hello);
+
 }
 
-// draw loops and loops
 function draw() {
+	hello='hey';
+
 
 }
-
-
-// write functions here
