@@ -1,10 +1,13 @@
 let clouds;
-let x = 0;
+let x = 255;
 let speed = 5;
+var wario;
 
 function preload() {
-  clouds = loadImage('superMarioClouds_0.png');
+  clouds = loadImage('angry sun.png');
+  wario=loadGif('wariosneeze.gif');
 }
+
 
   function setup() {
     createCanvas(500, 500);
@@ -14,7 +17,8 @@ function preload() {
   function draw() {
     background(200);
     image(clouds, x, 10, clouds.width / 2, clouds.height / 2);
-    image(clouds, x, 100, clouds.width / 2, clouds.height / 2);
+    image(wario,0,0);
+
     x = x + speed;
     move()
   }
@@ -23,7 +27,7 @@ function preload() {
   function move() {
     if (x >= width) {
       speed = -speed;
-    } else if (x < 0) {
+    } else if (x < -255) {
       speed = -speed
     }
   }
