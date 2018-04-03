@@ -1,45 +1,23 @@
-let sun;
-let x = 255;
-let speed = 5;
-var wario;
+let saveButton;
 
-function preload() {
-  sun = loadImage('angry sun.png');
-  wario = loadGif('wariosneeze.gif');
+functionsetup(){
+noCanvas();
+
+
+  saveButton= createButton("SAVE");
+  saveButton.mousePressed(saveDefinition);
 }
 
 
-function setup() {
-  createCanvas(500, 500);
-  background(200);
+function saveDefinition(){
+
+  console.log("saving definition");
+
+  createP(wordInput.value() + ' is surf word' + definitionInput.value());
 }
 
-function draw() {
-  background(200);
-  image(sun, x, 10, sun.width / 2, sun.height / 2);
-  image(wario, 0, 0);
+function draw(){
 
-  if (mouseIsPressed) {
-    wario.resize(0,0);
-  }
-else if (background(200)){ image(wario,0,0);}
-
-
-
-
-
-
-  x = x + speed;
-  move()
-}
-
-
-
-
-function move() {
-  if (x >= width) {
-    speed = -speed;
-  } else if (x < -255) {
-    speed = -speed
-  }
+  textSize(30);
+  text(wordInput.value)
 }
