@@ -1,6 +1,6 @@
 let saveButton;
 
-functionsetup(){
+function setup(){
 noCanvas();
 
 
